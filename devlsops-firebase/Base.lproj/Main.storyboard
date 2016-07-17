@@ -4,6 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,19 +26,164 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login screen" translatesAutoresizingMaskIntoConstraints="NO" id="YeE-ie-B5J">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" background="logo-stacked-white" translatesAutoresizingMaskIntoConstraints="NO" id="lM3-a7-4DF" customClass="DesignableTextField" customModule="Spring">
+                                <rect key="frame" x="20" y="268" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Xcl-Oo-RHP"/>
+                                    <constraint firstAttribute="height" constant="44" id="h5e-OJ-57E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9mK-ns-8MP" customClass="DesignableTextField" customModule="Spring">
+                                <rect key="frame" x="20" y="342" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NUV-m5-YRz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="kNI-Hs-DNW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p8-VW-IeQ" customClass="DesignableButton" customModule="Spring">
+                                <rect key="frame" x="104" y="416" width="168" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Fdy-Y7-Vjm"/>
+                                    <constraint firstAttribute="width" constant="168" id="MZT-H0-C8l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.96831101179122925" green="0.54659825563430786" blue="0.17310217022895813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iO-GD-GIG" customClass="DesignableButton" customModule="Spring">
+                                <rect key="frame" x="20" y="545" width="335" height="44"/>
+                                <color key="backgroundColor" red="0.30708634853363037" green="0.41980981826782227" blue="0.68072831630706787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="akH-aj-tX2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
+                                <state key="normal" title="Login with facebook">
+                                    <color key="titleColor" red="0.99990183115005493" green="1" blue="0.99987989664077759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goG-pp-XEq">
+                                <rect key="frame" x="20" y="501" width="335" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo-stacked-white" translatesAutoresizingMaskIntoConstraints="NO" id="PCJ-57-s0Y">
+                                <rect key="frame" x="113" y="140" width="150" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gvK-1Z-lQJ"/>
+                                    <constraint firstAttribute="height" constant="136" id="kfb-SP-3cK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gvK-1Z-lQJ"/>
+                                        <exclude reference="kfb-SP-3cK"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp5-XB-f2k">
+                                <rect key="frame" x="163" y="490" width="50" height="22"/>
+                                <color key="backgroundColor" red="0.96351033449172974" green="0.51164555549621582" blue="0.14559701085090637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fvo-0i-0gI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
+                                <color key="textColor" red="0.99990183115005493" green="1" blue="0.99987989664077759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96298378705978394" green="0.49227279424667358" blue="0.1317484974861145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2iO-GD-GIG" secondAttribute="trailing" constant="20" id="0Wb-NN-v40"/>
+                            <constraint firstItem="9mK-ns-8MP" firstAttribute="top" secondItem="lM3-a7-4DF" secondAttribute="bottom" constant="30" id="0in-gU-8GV"/>
+                            <constraint firstItem="lM3-a7-4DF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0qw-co-VAG"/>
+                            <constraint firstItem="2iO-GD-GIG" firstAttribute="top" secondItem="Sp5-XB-f2k" secondAttribute="bottom" constant="33" id="2Ag-Be-Pc0"/>
+                            <constraint firstItem="Sp5-XB-f2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2lC-jI-KXR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2iO-GD-GIG" secondAttribute="bottom" constant="78" id="53r-gX-Ck7"/>
+                            <constraint firstItem="8p8-VW-IeQ" firstAttribute="top" secondItem="9mK-ns-8MP" secondAttribute="bottom" constant="30" id="8SQ-Oe-DX2"/>
+                            <constraint firstItem="goG-pp-XEq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AcZ-Vb-i2t"/>
+                            <constraint firstItem="9mK-ns-8MP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="TNs-j8-mIY"/>
+                            <constraint firstAttribute="trailing" secondItem="lM3-a7-4DF" secondAttribute="trailing" constant="20" id="bCc-sc-OWb"/>
+                            <constraint firstItem="8p8-VW-IeQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cbo-5y-k8e"/>
+                            <constraint firstItem="PCJ-57-s0Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="hnx-Hd-jsb"/>
+                            <constraint firstAttribute="trailing" secondItem="goG-pp-XEq" secondAttribute="trailing" constant="20" id="i8v-IH-8GH"/>
+                            <constraint firstItem="2iO-GD-GIG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kaG-Xe-Yaf"/>
+                            <constraint firstItem="2iO-GD-GIG" firstAttribute="top" secondItem="goG-pp-XEq" secondAttribute="bottom" constant="42" id="kng-QA-o87"/>
+                            <constraint firstItem="Sp5-XB-f2k" firstAttribute="top" secondItem="8p8-VW-IeQ" secondAttribute="bottom" constant="30" id="lcc-oH-gyS"/>
+                            <constraint firstAttribute="trailing" secondItem="9mK-ns-8MP" secondAttribute="trailing" constant="20" id="mUV-M4-4rg"/>
+                            <constraint firstItem="lM3-a7-4DF" firstAttribute="top" secondItem="PCJ-57-s0Y" secondAttribute="bottom" constant="25" id="prd-b6-5La"/>
+                            <constraint firstItem="goG-pp-XEq" firstAttribute="top" secondItem="8p8-VW-IeQ" secondAttribute="bottom" constant="41" id="tRs-dm-ESD"/>
+                            <constraint firstItem="PCJ-57-s0Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkm-eu-TbY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hnx-Hd-jsb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="207.5" y="331.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5fk-wW-lMA">
+            <objects>
+                <viewController id="ZGP-rM-GWV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gDl-Gc-0qY"/>
+                        <viewControllerLayoutGuide type="bottom" id="aS0-Sm-Xon"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z9q-1a-EF2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96831101179122925" green="0.54659825563430786" blue="0.17310217022895813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgE-UU-c0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207.5" y="-459.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="login screen" width="375" height="667"/>
+        <image name="logo-stacked-white" width="150" height="103"/>
     </resources>
 </document>

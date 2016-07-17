@@ -44,6 +44,7 @@
 		85E857931D3AE9AC006C1404 /* devlsops-firebaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "devlsops-firebaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E857971D3AE9AC006C1404 /* devlsops_firebaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devlsops_firebaseTests.swift; sourceTree = "<group>"; };
 		85E857991D3AE9AC006C1404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E857AB1D3B2C76006C1404 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
 		A0985CE7CD38C232EC4D51B7 /* Pods-devlsops-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devlsops-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devlsops-firebase/Pods-devlsops-firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		B8B88C367061A3089A0493F4 /* Pods-devlsops-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devlsops-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-devlsops-firebase/Pods-devlsops-firebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +112,7 @@
 		85E8577E1D3AE9AC006C1404 /* devlsops-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				85E857AB1D3B2C76006C1404 /* SF-UI-Text-Regular.otf */,
 				85E8577F1D3AE9AC006C1404 /* AppDelegate.swift */,
 				85E857811D3AE9AC006C1404 /* ViewController.swift */,
 				85E857831D3AE9AC006C1404 /* Main.storyboard */,
