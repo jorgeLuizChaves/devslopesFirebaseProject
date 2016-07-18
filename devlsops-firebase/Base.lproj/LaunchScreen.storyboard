@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo-devslops" translatesAutoresizingMaskIntoConstraints="NO" id="54A-Dc-jRY">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="logo-devslops" translatesAutoresizingMaskIntoConstraints="NO" id="54A-Dc-jRY">
                                 <rect key="frame" x="87" y="266" width="200" height="136"/>
                             </imageView>
                         </subviews>

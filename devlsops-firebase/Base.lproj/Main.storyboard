@@ -99,6 +99,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZR-8L-guM"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goG-pp-XEq">
                                 <rect key="frame" x="20" y="501" width="335" height="2"/>
@@ -162,25 +165,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="207.5" y="331.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5fk-wW-lMA">
-            <objects>
-                <viewController id="ZGP-rM-GWV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gDl-Gc-0qY"/>
-                        <viewControllerLayoutGuide type="bottom" id="aS0-Sm-Xon"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="z9q-1a-EF2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.96831101179122925" green="0.54659825563430786" blue="0.17310217022895813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LgE-UU-c0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="207.5" y="-459.5"/>
         </scene>
     </scenes>
     <resources>

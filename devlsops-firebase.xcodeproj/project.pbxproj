@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		25A2689462A771E4537F6664 /* Pods_devlsops_firebaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1927F7EEF5827DE5792D2F51 /* Pods_devlsops_firebaseTests.framework */; };
 		380627CA27C7D74816238A6F /* Pods_devlsops_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC13294CA36341A7AA8ADC2 /* Pods_devlsops_firebase.framework */; };
+		85528F751D3D20BD00162641 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85528F721D3D20BD00162641 /* Bolts.framework */; };
+		85528F761D3D20BD00162641 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85528F731D3D20BD00162641 /* FBSDKCoreKit.framework */; };
+		85528F771D3D20BD00162641 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85528F741D3D20BD00162641 /* FBSDKLoginKit.framework */; };
 		85E857801D3AE9AC006C1404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E8577F1D3AE9AC006C1404 /* AppDelegate.swift */; };
 		85E857821D3AE9AC006C1404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E857811D3AE9AC006C1404 /* ViewController.swift */; };
 		85E857851D3AE9AC006C1404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E857831D3AE9AC006C1404 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		1927F7EEF5827DE5792D2F51 /* Pods_devlsops_firebaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devlsops_firebaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B66E6C6C6F7E236642784 /* Pods-devlsops-firebaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devlsops-firebaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devlsops-firebaseTests/Pods-devlsops-firebaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC13294CA36341A7AA8ADC2 /* Pods_devlsops_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devlsops_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85528F721D3D20BD00162641 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		85528F731D3D20BD00162641 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		85528F741D3D20BD00162641 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		85E8577C1D3AE9AC006C1404 /* devlsops-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devlsops-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E8577F1D3AE9AC006C1404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85E857811D3AE9AC006C1404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				380627CA27C7D74816238A6F /* Pods_devlsops_firebase.framework in Frameworks */,
+				85528F761D3D20BD00162641 /* FBSDKCoreKit.framework in Frameworks */,
+				85528F771D3D20BD00162641 /* FBSDKLoginKit.framework in Frameworks */,
+				85528F751D3D20BD00162641 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +98,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85528F711D3D1E0C00162641 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85528F721D3D20BD00162641 /* Bolts.framework */,
+				85528F731D3D20BD00162641 /* FBSDKCoreKit.framework */,
+				85528F741D3D20BD00162641 /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85E857731D3AE9AC006C1404 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 		85E8577E1D3AE9AC006C1404 /* devlsops-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				85528F711D3D1E0C00162641 /* Frameworks */,
 				85E857AB1D3B2C76006C1404 /* SF-UI-Text-Regular.otf */,
 				85E8577F1D3AE9AC006C1404 /* AppDelegate.swift */,
 				85E857811D3AE9AC006C1404 /* ViewController.swift */,
@@ -467,6 +487,12 @@
 			baseConfigurationReference = A0985CE7CD38C232EC4D51B7 /* Pods-devlsops-firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/devlsops-firebase",
+				);
 				INFOPLIST_FILE = "devlsops-firebase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ocatech.devlsops-firebase";
@@ -479,6 +505,12 @@
 			baseConfigurationReference = B8B88C367061A3089A0493F4 /* Pods-devlsops-firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/devlsops-firebase",
+				);
 				INFOPLIST_FILE = "devlsops-firebase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ocatech.devlsops-firebase";
