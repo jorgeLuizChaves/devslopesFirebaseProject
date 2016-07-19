@@ -14,12 +14,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func facebookButtonDidTouch(sender: AnyObject!) {
@@ -36,20 +34,5 @@ class ViewController: UIViewController {
                 print(accessToken)
             }
         }
-        
-//        facebookLogin.logInWithReadPermissions(["email"]) { (facebookResult, facebookError) in
-//            
-//            if(facebookError != nil){
-//                print("Facebook login failed. Error \(facebookError)")
-//            }else if(facebookResult.isCancelled){
-//                print("Facebook login was cancelled.")
-//            }else{
-//                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-//                print("sucesso champs ;)")
-//            }
-//        }
     }
-
-
 }
-
