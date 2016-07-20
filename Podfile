@@ -7,7 +7,9 @@ target 'devlsops-firebase' do
 
   # Pods for devlsops-firebase
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
-  pod 'Firebase', '>= 2.5.1'  
+  pod 'Firebase'  
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
   target 'devlsops-firebaseTests' do
     inherit! :search_paths
