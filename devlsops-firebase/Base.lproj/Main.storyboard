@@ -10,7 +10,6 @@
             <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
-            <string>SFUIText-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -86,26 +85,6 @@
                                     <action selector="loginButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NDi-h6-uZg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iO-GD-GIG" customClass="DesignableButton" customModule="Spring">
-                                <rect key="frame" x="20" y="593" width="335" height="44"/>
-                                <color key="backgroundColor" red="0.30708634853363037" green="0.41980981826782227" blue="0.68072831630706787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="akH-aj-tX2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
-                                <state key="normal" title="Login with facebook">
-                                    <color key="titleColor" red="0.99990183115005493" green="1" blue="0.99987989664077759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="facebookButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZR-8L-guM"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goG-pp-XEq">
                                 <rect key="frame" x="20" y="554" width="335" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,6 +96,7 @@
                                 <rect key="frame" x="163" y="534" width="50" height="37"/>
                                 <color key="backgroundColor" red="0.94814199209213257" green="0.50008857250213623" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="fPk-Qb-QfQ"/>
                                     <constraint firstAttribute="width" constant="50" id="fvo-0i-0gI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
@@ -138,19 +118,24 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vam-be-Z8b" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kzg-FM-eqc"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94814199209213257" green="0.50008857250213623" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91834753751754761" green="0.51544314622879028" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2iO-GD-GIG" secondAttribute="trailing" constant="20" id="0Wb-NN-v40"/>
                             <constraint firstItem="9mK-ns-8MP" firstAttribute="top" secondItem="lM3-a7-4DF" secondAttribute="bottom" constant="10" id="0in-gU-8GV"/>
                             <constraint firstItem="lM3-a7-4DF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0qw-co-VAG"/>
-                            <constraint firstItem="2iO-GD-GIG" firstAttribute="top" secondItem="Sp5-XB-f2k" secondAttribute="bottom" constant="33" id="2Ag-Be-Pc0"/>
                             <constraint firstItem="Sp5-XB-f2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2lC-jI-KXR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2iO-GD-GIG" secondAttribute="bottom" constant="30" id="53r-gX-Ck7"/>
                             <constraint firstItem="8p8-VW-IeQ" firstAttribute="top" secondItem="9mK-ns-8MP" secondAttribute="bottom" constant="10" id="8SQ-Oe-DX2"/>
                             <constraint firstItem="goG-pp-XEq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AcZ-Vb-i2t"/>
+                            <constraint firstItem="vam-be-Z8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Exd-Wv-42O"/>
                             <constraint firstItem="goG-pp-XEq" firstAttribute="top" secondItem="8p8-VW-IeQ" secondAttribute="bottom" constant="41" id="Eze-kh-ua5"/>
                             <constraint firstItem="PCJ-57-s0Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="IAb-LZ-Na5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vam-be-Z8b" secondAttribute="bottom" constant="20" id="QQT-1t-lxE"/>
                             <constraint firstItem="9mK-ns-8MP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="TNs-j8-mIY"/>
                             <constraint firstItem="Sp5-XB-f2k" firstAttribute="top" secondItem="8p8-VW-IeQ" secondAttribute="bottom" constant="21" id="aot-ZM-9yc"/>
                             <constraint firstAttribute="trailing" secondItem="lM3-a7-4DF" secondAttribute="trailing" constant="20" id="bCc-sc-OWb"/>
@@ -158,14 +143,12 @@
                             <constraint firstAttribute="trailing" secondItem="goG-pp-XEq" secondAttribute="trailing" constant="20" id="daH-QZ-i2i"/>
                             <constraint firstItem="PCJ-57-s0Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="hnx-Hd-jsb"/>
                             <constraint firstAttribute="trailing" secondItem="goG-pp-XEq" secondAttribute="trailing" constant="20" id="i8v-IH-8GH"/>
-                            <constraint firstItem="2iO-GD-GIG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kaG-Xe-Yaf"/>
-                            <constraint firstItem="2iO-GD-GIG" firstAttribute="top" secondItem="goG-pp-XEq" secondAttribute="bottom" constant="42" id="kng-QA-o87"/>
                             <constraint firstItem="goG-pp-XEq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lVy-G7-yR2"/>
                             <constraint firstItem="Sp5-XB-f2k" firstAttribute="top" secondItem="8p8-VW-IeQ" secondAttribute="bottom" constant="10" id="lcc-oH-gyS"/>
                             <constraint firstAttribute="trailing" secondItem="9mK-ns-8MP" secondAttribute="trailing" constant="20" id="mUV-M4-4rg"/>
-                            <constraint firstItem="2iO-GD-GIG" firstAttribute="top" secondItem="Sp5-XB-f2k" secondAttribute="bottom" constant="22" id="s6e-Bw-GAh"/>
+                            <constraint firstItem="vam-be-Z8b" firstAttribute="top" secondItem="Sp5-XB-f2k" secondAttribute="bottom" constant="32" id="njL-qe-W8G"/>
+                            <constraint firstAttribute="trailing" secondItem="vam-be-Z8b" secondAttribute="trailing" constant="20" id="piY-Iu-pKo"/>
                             <constraint firstItem="goG-pp-XEq" firstAttribute="top" secondItem="8p8-VW-IeQ" secondAttribute="bottom" constant="41" id="tRs-dm-ESD"/>
-                            <constraint firstItem="2iO-GD-GIG" firstAttribute="top" secondItem="goG-pp-XEq" secondAttribute="bottom" constant="38" id="u4O-t8-qxd"/>
                             <constraint firstItem="PCJ-57-s0Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkm-eu-TbY"/>
                         </constraints>
                         <variation key="default">
@@ -175,14 +158,13 @@
                                 <exclude reference="i8v-IH-8GH"/>
                                 <exclude reference="tRs-dm-ESD"/>
                                 <exclude reference="lcc-oH-gyS"/>
-                                <exclude reference="2Ag-Be-Pc0"/>
-                                <exclude reference="kng-QA-o87"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emailText" destination="lM3-a7-4DF" id="kHN-Zd-fyG"/>
+                        <outlet property="facebookLoginButton" destination="vam-be-Z8b" id="pDy-3S-g6l"/>
                         <outlet property="passwordText" destination="9mK-ns-8MP" id="v2R-Ou-vdS"/>
                         <segue destination="TyM-ZP-aFw" kind="presentation" identifier="segueHome" id="6ga-3R-LkX"/>
                     </connections>
@@ -206,7 +188,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN SCREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbt-Ue-3pI">
                                 <rect key="frame" x="132" y="323" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

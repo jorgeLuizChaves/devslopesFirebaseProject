@@ -37,6 +37,7 @@
 		1927F7EEF5827DE5792D2F51 /* Pods_devlsops_firebaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devlsops_firebaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B66E6C6C6F7E236642784 /* Pods-devlsops-firebaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devlsops-firebaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devlsops-firebaseTests/Pods-devlsops-firebaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC13294CA36341A7AA8ADC2 /* Pods_devlsops_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devlsops_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8514F30B1D3FE3A400E42AD1 /* devslops.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = devslops.playground; sourceTree = "<group>"; };
 		85528F721D3D20BD00162641 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		85528F731D3D20BD00162641 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		85528F741D3D20BD00162641 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 				85E8578B1D3AE9AC006C1404 /* LaunchScreen.storyboard */,
 				85E8578E1D3AE9AC006C1404 /* Info.plist */,
 				85E857861D3AE9AC006C1404 /* devlsops_firebase.xcdatamodeld */,
+				8514F30B1D3FE3A400E42AD1 /* devslops.playground */,
 			);
 			path = "devlsops-firebase";
 			sourceTree = "<group>";
