@@ -21,12 +21,20 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
     @IBOutlet weak var viewTest: UIView!
     
     let USER_NOT_FOUND_CODE = 17011
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         facebookLoginButton.delegate = self
         facebookLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
         facebookLoginButton.tooltipColorStyle = FBSDKTooltipColorStyle.NeutralGray
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if let _ = userDefaults.stringForKey("uid"){
+            self.segueToDashboard()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,28 +45,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
         self.view.becomeFirstResponder()
     }
     
-    @IBAction func facebookButtonDidTouch(sender: AnyObject!) {
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self) { (facebookLoginResult, facebookError) in
-            if(facebookError != nil){
-                NSLog("Facebook login failed. Error \(facebookError)")
-            }else if (facebookLoginResult.isCancelled){
-                NSLog("Facebook login was cancelled.")
-            }else{
-                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-                NSLog("sucesso champs ;)")
-                let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
-                
-                FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
-                     NSLog("aqui foi com face")
-                    self.segueToDashboard()
-                })
-               
-            }
-        }
-    }
-    
     @IBAction func loginButtonDidTouch(sender: AnyObject) {
         if let email = emailText.text where emailText.text != "", let password = passwordText.text where passwordText.text != "" {
             FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (user, error) in
@@ -67,11 +53,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
                     if(error?.code == self.USER_NOT_FOUND_CODE){
                         FIRAuth.auth()?.createUserWithEmail(email, password: password, completion: { (user, error) in
                             NSLog("login criado com sucesso. ;)")
-                            self.segueToDashboard()
+                            self.firstAccessApp(user)
                         })
                     }
                 }else{
                     NSLog("user already registered")
+                    self.saveUIDtoNSDefaults(user!.uid)
                     self.segueToDashboard()
                 }
             })
@@ -86,12 +73,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
             NSLog("Facebook login was cancelled.")
         }else{
             let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-            NSLog("sucesso champs ;)")
+            NSLog("facebook authentication succeed ;)")
             let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
             
             FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
                 NSLog("aqui foi com face")
-                self.segueToDashboard()
+                self.firstAccessApp(user)
             })
         }
     }
@@ -108,8 +95,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
         view.endEditing(true)
     }
     
-    //MARK: Private Functions
+    //MARK: Private Functions    
+    private func firstAccessApp(user: FIRUser?){
+        if let userLogged = user {
+            FirebaseDataBaseService().addUser(userLogged)
+            self.saveUIDtoNSDefaults(user!.uid)
+            self.segueToDashboard()
+        }
+    }
+    
     private func segueToDashboard() {
         performSegueWithIdentifier("segueHome", sender: nil)
+    }
+    
+    private func saveUIDtoNSDefaults(uid: String){
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(uid, forKey: "uid")
     }
 }
