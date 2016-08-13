@@ -24,6 +24,7 @@ import UIKit
 
 @IBDesignable public class DesignableImageView: SpringImageView {
     
+    
     @IBInspectable public var borderColor: UIColor = UIColor.clearColor() {
         didSet {
             layer.borderColor = borderColor.CGColor
@@ -38,6 +39,7 @@ import UIKit
     
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
+            self.clipsToBounds = true
             layer.cornerRadius = cornerRadius
         }
     }

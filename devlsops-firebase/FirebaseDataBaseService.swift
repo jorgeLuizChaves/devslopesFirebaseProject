@@ -12,11 +12,16 @@ import FirebaseDatabase
 
 struct FirebaseDataBaseService {
     
-    let POSTS = "/posts"
-    let USERS = "/users"
+    let POSTS = "/posts/"
+    let USERS = "/users/"
  
     func posts() -> FIRDatabaseReference {
         return FIRDatabase.database().referenceWithPath(POSTS)
+    }
+    
+    func findUser(userKey: String) -> FIRDatabaseReference {
+        let userRef = "\(USERS)\(userKey)"
+        return FIRDatabase.database().referenceWithPath(userRef)
     }
     
     func addUser(user: FIRUser) {

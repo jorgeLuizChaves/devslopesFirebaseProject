@@ -13,14 +13,7 @@ class TimeLinePostsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dbPosts = FirebaseDataBaseService().posts()
-        dbPosts.observeEventType(.Value, withBlock: { snapshot in
-            if let posts = snapshot.value as? [String : [String : AnyObject]] {
-                for (_, post) in posts {
-                    NSLog("name: \(post["author"]!)")
-                }
-            }
-        })
+       
     }
 
     override func didReceiveMemoryWarning() {

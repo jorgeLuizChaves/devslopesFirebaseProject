@@ -22,7 +22,10 @@
 		85E8578A1D3AE9AC006C1404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E857891D3AE9AC006C1404 /* Assets.xcassets */; };
 		85E8578D1D3AE9AC006C1404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E8578B1D3AE9AC006C1404 /* LaunchScreen.storyboard */; };
 		85E857981D3AE9AC006C1404 /* devlsops_firebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E857971D3AE9AC006C1404 /* devlsops_firebaseTests.swift */; };
+		CF4D4C7A1D5D07FF00338DD5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D4C791D5D07FF00338DD5 /* Post.swift */; };
+		CF4D4C7C1D5D116600338DD5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D4C7B1D5D116600338DD5 /* PostCell.swift */; };
 		CF79E76F1D596BDE00E2EDCB /* TableViewPostControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79E76E1D596BDE00E2EDCB /* TableViewPostControllerTableViewController.swift */; };
+		CF8EB5741D5E943F000D5A44 /* PostNoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8EB5731D5E943F000D5A44 /* PostNoImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +64,10 @@
 		85E857AB1D3B2C76006C1404 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
 		A0985CE7CD38C232EC4D51B7 /* Pods-devlsops-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devlsops-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devlsops-firebase/Pods-devlsops-firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		B8B88C367061A3089A0493F4 /* Pods-devlsops-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devlsops-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-devlsops-firebase/Pods-devlsops-firebase.release.xcconfig"; sourceTree = "<group>"; };
+		CF4D4C791D5D07FF00338DD5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CF4D4C7B1D5D116600338DD5 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CF79E76E1D596BDE00E2EDCB /* TableViewPostControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewPostControllerTableViewController.swift; sourceTree = "<group>"; };
+		CF8EB5731D5E943F000D5A44 /* PostNoImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNoImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,9 @@
 		85E8577E1D3AE9AC006C1404 /* devlsops-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				CF8EB5761D5E9576000D5A44 /* Model */,
+				CF8EB5751D5E94C7000D5A44 /* View */,
+				CF4D4C761D5D01A300338DD5 /* Service */,
 				85A118EF1D4D81CE000C26EC /* Firebase */,
 				85ABC4191D3E82EA003939A4 /* GoogleService-Info.plist */,
 				85528F711D3D1E0C00162641 /* Frameworks */,
@@ -168,7 +177,6 @@
 				85E857861D3AE9AC006C1404 /* devlsops_firebase.xcdatamodeld */,
 				8514F30B1D3FE3A400E42AD1 /* devslops.playground */,
 				856B5D2A1D4AEFBE00D60C04 /* TimeLinePostsViewController.swift */,
-				856B5D2C1D4AF4A100D60C04 /* FirebaseDataBaseService.swift */,
 				CF79E76E1D596BDE00E2EDCB /* TableViewPostControllerTableViewController.swift */,
 			);
 			path = "devlsops-firebase";
@@ -181,6 +189,31 @@
 				85E857991D3AE9AC006C1404 /* Info.plist */,
 			);
 			path = "devlsops-firebaseTests";
+			sourceTree = "<group>";
+		};
+		CF4D4C761D5D01A300338DD5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				856B5D2C1D4AF4A100D60C04 /* FirebaseDataBaseService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		CF8EB5751D5E94C7000D5A44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF8EB5731D5E943F000D5A44 /* PostNoImageCell.swift */,
+				CF4D4C7B1D5D116600338DD5 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CF8EB5761D5E9576000D5A44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF4D4C791D5D07FF00338DD5 /* Post.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +424,10 @@
 				856B5D2B1D4AEFBE00D60C04 /* TimeLinePostsViewController.swift in Sources */,
 				85E857821D3AE9AC006C1404 /* ViewController.swift in Sources */,
 				85E857801D3AE9AC006C1404 /* AppDelegate.swift in Sources */,
+				CF4D4C7A1D5D07FF00338DD5 /* Post.swift in Sources */,
 				CF79E76F1D596BDE00E2EDCB /* TableViewPostControllerTableViewController.swift in Sources */,
+				CF8EB5741D5E943F000D5A44 /* PostNoImageCell.swift in Sources */,
+				CF4D4C7C1D5D116600338DD5 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +557,7 @@
 			baseConfigurationReference = A0985CE7CD38C232EC4D51B7 /* Pods-devlsops-firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,6 +576,7 @@
 			baseConfigurationReference = B8B88C367061A3089A0493F4 /* Pods-devlsops-firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

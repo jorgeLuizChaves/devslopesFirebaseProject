@@ -83,10 +83,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
         }
     }
     
-    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
-        return true
-    }
-    
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         
     }
@@ -98,8 +94,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDel
     //MARK: Private Functions    
     private func firstAccessApp(user: FIRUser?){
         if let userLogged = user {
-            FirebaseDataBaseService().addUser(userLogged)
-            self.saveUIDtoNSDefaults(user!.uid)
+            self.saveUIDtoNSDefaults(userLogged.uid)
             self.segueToDashboard()
         }
     }
